@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Then
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let appCoordinator = AppCoordinator()

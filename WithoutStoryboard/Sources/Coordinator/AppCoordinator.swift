@@ -8,16 +8,18 @@
 import Foundation
 import UIKit
 
-class AppCoordinator: BaseCoordinator, AppCoordinatorType {    
+final class AppCoordinator: BaseCoordinator, AppCoordinatorType {
+    private let window = UIWindow(frame: UIScreen.main.bounds)
+    
     func start() -> UIWindow {
-        let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = .white
         window.makeKeyAndVisible()
         
-        let startingVC = ViewController()
+        let startingVC = TodoTaskViewController()
         let navigationController = UINavigationController(rootViewController: startingVC)
         window.rootViewController = navigationController
         
         return window
     }
+    
 }

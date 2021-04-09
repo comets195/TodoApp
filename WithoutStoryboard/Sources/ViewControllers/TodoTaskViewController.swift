@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class TodoTaskViewController: UIViewController {
+    private let tableView = UITableView().then {
+        $0.allowsSelectionDuringEditing = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }

@@ -9,14 +9,21 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: BaseCoordinator, AppCoordinatorType {
+    
     private let window = UIWindow(frame: UIScreen.main.bounds)
+    private let dependencies: AppDIConatiner
+    
+    init(dependencies: AppDIConatiner) {
+        self.dependencies = dependencies
+    }
     
     func start() -> UIWindow {
         window.backgroundColor = .white
         window.makeKeyAndVisible()
         
-        let startingVC = TodoTaskViewController()
-        let navigationController = UINavigationController(rootViewController: startingVC)
+        let todoTaskDIContainer = dependencies.makeTodoTaskListSceneDIContainer()
+        let todoTaskCoordinator = todoTaskDIContainer.makeTodoTaskCoordinator()
+        let navigationController = UINavigationController(rootViewController: todoTaskCoordinator.viewController)
         window.rootViewController = navigationController
         
         return window

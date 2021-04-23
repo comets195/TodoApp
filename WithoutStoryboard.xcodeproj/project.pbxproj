@@ -16,6 +16,12 @@
 		EA2A2744261D9C5A00769823 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A2743261D9C5A00769823 /* BaseCoordinator.swift */; };
 		EA2A2771261DA81600769823 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A2770261DA81600769823 /* AppCoordinator.swift */; };
 		EA2A2782261E9A8500769823 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A2781261E9A8500769823 /* TaskCell.swift */; };
+		EAED24E8263143FD0094FD56 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED24E7263143FD0094FD56 /* AppDIContainer.swift */; };
+		EAED24FB2632878A0094FD56 /* TodoTaskDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED24FA2632878A0094FD56 /* TodoTaskDIContainer.swift */; };
+		EAED24FF263288BE0094FD56 /* UserDefaultsServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED24FE263288BE0094FD56 /* UserDefaultsServiceType.swift */; };
+		EAED2504263289A80094FD56 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED2503263289A80094FD56 /* UserDefaultsKey.swift */; };
+		EAED2507263295390094FD56 /* TodoTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED2506263295390094FD56 /* TodoTaskViewModel.swift */; };
+		EAED250A263299F40094FD56 /* TodoTaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED2509263299F40094FD56 /* TodoTaskCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		EA2A2743261D9C5A00769823 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		EA2A2770261DA81600769823 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EA2A2781261E9A8500769823 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		EAED24E7263143FD0094FD56 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		EAED24FA2632878A0094FD56 /* TodoTaskDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskDIContainer.swift; sourceTree = "<group>"; };
+		EAED24FE263288BE0094FD56 /* UserDefaultsServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceType.swift; sourceTree = "<group>"; };
+		EAED2503263289A80094FD56 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		EAED2506263295390094FD56 /* TodoTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskViewModel.swift; sourceTree = "<group>"; };
+		EAED2509263299F40094FD56 /* TodoTaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,9 @@
 		EA2A2723261D8C0800769823 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EAED25022632899D0094FD56 /* Types */,
+				EAED24E6263143EA0094FD56 /* DIContainer */,
+				EAED24FD263287DC0094FD56 /* Services */,
 				EA2A2742261D9B5400769823 /* Coordinator */,
 				EA2A277F261E9A6E00769823 /* ViewControllers */,
 				EA2A2780261E9A7700769823 /* Views */,
@@ -125,6 +140,7 @@
 			children = (
 				EA2A2743261D9C5A00769823 /* BaseCoordinator.swift */,
 				EA2A2770261DA81600769823 /* AppCoordinator.swift */,
+				EAED2509263299F40094FD56 /* TodoTaskCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -133,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2A270B261D8BB500769823 /* TodoTaskViewController.swift */,
+				EAED2506263295390094FD56 /* TodoTaskViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +160,31 @@
 				EA2A2781261E9A8500769823 /* TaskCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EAED24E6263143EA0094FD56 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				EAED24E7263143FD0094FD56 /* AppDIContainer.swift */,
+				EAED24FA2632878A0094FD56 /* TodoTaskDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		EAED24FD263287DC0094FD56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EAED24FE263288BE0094FD56 /* UserDefaultsServiceType.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EAED25022632899D0094FD56 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EAED2503263289A80094FD56 /* UserDefaultsKey.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,10 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAED24FF263288BE0094FD56 /* UserDefaultsServiceType.swift in Sources */,
+				EAED250A263299F40094FD56 /* TodoTaskCoordinator.swift in Sources */,
+				EAED24E8263143FD0094FD56 /* AppDIContainer.swift in Sources */,
 				EA2A270C261D8BB500769823 /* TodoTaskViewController.swift in Sources */,
 				EA2A2708261D8BB500769823 /* AppDelegate.swift in Sources */,
+				EAED2504263289A80094FD56 /* UserDefaultsKey.swift in Sources */,
 				EA2A2771261DA81600769823 /* AppCoordinator.swift in Sources */,
 				EA2A271E261D8BDE00769823 /* main.swift in Sources */,
+				EAED24FB2632878A0094FD56 /* TodoTaskDIContainer.swift in Sources */,
+				EAED2507263295390094FD56 /* TodoTaskViewModel.swift in Sources */,
 				EA2A2782261E9A8500769823 /* TaskCell.swift in Sources */,
 				EA2A2744261D9C5A00769823 /* BaseCoordinator.swift in Sources */,
 			);
